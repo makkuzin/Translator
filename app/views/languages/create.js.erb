@@ -1,0 +1,22 @@
+<% if @lang.valid? %>
+
+    $('header .alert #flash_message').text("Язык добавлен в словарь!");
+    $('header .alert').removeClass('alert-danger').addClass('alert-success');
+
+<% else %>
+
+    $('header .alert #flash_message').text("Произошли ошибки при сохранении");
+    $('header .alert').removeClass('alert-success').addClass('alert-danger');
+
+<% end %>
+
+$('header .alert').show();
+$('#new_lang_form input').val('');
+
+setTimeout(function() {
+    $('header .alert').fadeOut(300)
+}, 3000 );
+
+<% if @lang.valid? %>
+    location.href = '/'
+<% end %>

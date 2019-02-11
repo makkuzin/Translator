@@ -1,0 +1,15 @@
+<h2 class="h3">Добавить язык в словарь:</h2>
+
+<%= form_for Language.new, method: :post, remote: true, html: { id: 'new_lang_form' } do |f| %>
+    <div class="row">
+        <div class="col-md-4">
+            <%= f.text_field :title, class: 'form-control', placeholder: "Название" %>
+        </div>
+        <div class="col-md-4">
+            <%= f.text_field :transcription, class: 'form-control', placeholder: "Транскрипция" %>
+        </div>
+        <div class="col-md-4">
+            <%= f.submit "Добавить", class: 'btn btn-primary' %>
+        </div>
+    </div>
+<%  end %>
