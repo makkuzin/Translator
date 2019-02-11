@@ -1,6 +1,6 @@
 class Language < ApplicationRecord
-  validates :title, :transcription, presence: true
-  validates :transcription, uniqueness: true
+  validates :title, presence: true
+  validates :transcription, presence: true, uniqueness: true
 
-
+  has_many :words
 end
