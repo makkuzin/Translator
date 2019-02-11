@@ -36,6 +36,10 @@ RSpec.describe Language, type: :model do
 
       expect(language2).to be_invalid
       expect("has already been taken").to be_in(language2.errors[:transcription])
+
+      language2.transcription = language2.transcription.upcase
+      expect(language2).to be_invalid
+      expect("has already been taken").to be_in(language2.errors[:transcription])
     end
   end
 

@@ -1,5 +1,5 @@
 class Word < ApplicationRecord
-  validates :title, presence: true, uniqueness: true
+  validates :title, presence: true, uniqueness: { case_sensitive: false }
 
   belongs_to :language
   belongs_to :meaning

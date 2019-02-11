@@ -26,6 +26,10 @@ RSpec.describe Word, type: :model do
 
       expect(word2).to be_invalid
       expect("has already been taken").to be_in(word2.errors[:title])
+
+      word2.title = word2.title.upcase
+      expect(word2).to be_invalid
+      expect("has already been taken").to be_in(word2.errors[:title])
     end
 
     it 'must belong to language' do
