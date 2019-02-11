@@ -7,4 +7,10 @@ class Word < ApplicationRecord
   def translations
     meaning.words.where.not(id: id)
   end
+
+  # TODO
+  def translations<<()
+  end
+
+  # TODO create new meaning on demand, not for existed words
 end

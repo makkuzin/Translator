@@ -1,0 +1,89 @@
+<h2 class="h3">Добавить язык в словарь:</h2>
+
+<div class="row" id="new_lang_form">
+    <div class="col-md-4">
+        <input type="text" class="form-control" placeholder="Название">
+    </div>
+    <div class="col-md-4">
+        <input type="text" class="form-control" placeholder="Транскрипция">
+    </div>
+    <div class="col-md-4">
+        <button type="button" class="btn btn-primary">Добавить</button>
+    </div>
+</div>
+
+<br>
+<h2 class="h3">Добавить слово в словарь:</h2>
+
+<div class="row" id="new_words_form">
+    <div class="col-md-6">
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Слово">
+            <select class="custom-select">
+                <option value="ru" title="Русский" selected>ru</option>
+                <option value="en" title="Английский">en</option>
+                <option value="fr" title="Французский">fr</option>
+                <option value="de" title="Немецкий">de</option>
+                <option value="jp" title="Японский">jp</option>
+                <option value="cn" title="Китайский">cn</option>
+            </select>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="input-group">
+            <select class="custom-select">
+                <option value="ru" title="Русский">ru</option>
+                <option value="en" title="Английский" selected>en</option>
+                <option value="fr" title="Французский">fr</option>
+                <option value="de" title="Немецкий">de</option>
+                <option value="jp" title="Японский">jp</option>
+                <option value="cn" title="Китайский">cn</option>
+            </select>
+            <input type="text" class="form-control" placeholder="Перевод">
+        </div>
+    </div>
+
+    <div class="col-md-12">
+        <button type="button" class="btn btn-primary">Добавить</button>
+    </div>
+</div>
+
+<div class="row" id="search_form">
+    <div class="col-lg-8 offset-lg-2">
+        <div class="input-group input-group-lg">
+            <input type="text" class="form-control" placeholder="Найти перевод ...">
+            <select class="custom-select">
+                <option value="ru" title="Русский" selected>ru</option>
+                <option value="en" title="Английский">en</option>
+                <option value="fr" title="Французский">fr</option>
+                <option value="de" title="Немецкий">de</option>
+                <option value="jp" title="Японский">jp</option>
+                <option value="cn" title="Китайский">cn</option>
+            </select>
+            <div class="input-group-append">
+                <button class="btn btn-primary" type="button">Поиск</button>
+            </div>
+        </div>
+        <div id="search_result_area">
+            <h2 class="h3">Результат:</h2>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    One
+                    <span class="badge badge-secondary" title="Английский">en</span>
+                </li>
+                <li class="list-group-item">
+                    Two
+                    <span class="badge badge-secondary" title="Французский">fr</span>
+                </li>
+                <li class="list-group-item">
+                    Three
+                    <span class="badge badge-secondary" title="Немецкий">de</span>
+                </li>
+                <li class="list-group-item">
+                    Four
+                    <span class="badge badge-secondary" title="Японский">jp</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

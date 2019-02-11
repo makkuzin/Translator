@@ -1,0 +1,41 @@
+// Place all the styles related to the main controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  margin-bottom: 50px
+}
+
+header {
+  margin-bottom: 25px;
+
+  navbar {
+    display: block;
+    height: 25px
+  }
+  section {
+    height: 50px
+  }
+}
+
+.custom-select {
+  max-width: 80px
+}
+
+#new_lang_form > div,
+#new_words_form > div {
+  margin-top: 10px
+}
+
+#search_form {
+  margin-top: 50px
+}
+
+#search_result_area {
+  margin-top: 25px;
+
+  .badge {
+    display: inline-block;
+    float: right
+  }
+}
