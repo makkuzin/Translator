@@ -1,0 +1,37 @@
+<h2 class="h3">Добавить слово в словарь:</h2>
+
+<%= form_tag '/words', method: :post, remote: true, id: 'new_words_form' do |f| %>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="input-group">
+                <input type="text" name="words[word][title]" class="form-control" placeholder="Слово">
+                <select class="custom-select" name="words[word][language_id]">
+                    <% @languages.each do |lang| %>
+                        <option value="<%= lang.id %>"
+                                title="<%= lang.title %>">
+                            <%= lang.transcription %>
+                        </option>
+                    <% end %>
+                </select>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="input-group">
+                <select class="custom-select" name="words[translation][language_id]">
+                    <% @languages.each do |lang| %>
+                        <option value="<%= lang.id %>"
+                                title="<%= lang.title %>">
+                            <%= lang.transcription %>
+                        </option>
+                    <% end %>
+                </select>
+                <input type="text" name="words[translation][title]" class="form-control" placeholder="Перевод">
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <%= submit_tag "Добавить", class: 'btn btn-primary' %>
+        </div>
+    </div>
+<% end %>

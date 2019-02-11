@@ -1,40 +1,6 @@
 <%= render 'languages/new_form' %>
-
 <br>
-<h2 class="h3">Добавить слово в словарь:</h2>
-
-<div class="row" id="new_words_form">
-    <div class="col-md-6">
-        <div class="input-group">
-            <input type="text" class="form-control" placeholder="Слово">
-            <select class="custom-select">
-                <option value="ru" title="Русский" selected>ru</option>
-                <option value="en" title="Английский">en</option>
-                <option value="fr" title="Французский">fr</option>
-                <option value="de" title="Немецкий">de</option>
-                <option value="jp" title="Японский">jp</option>
-                <option value="cn" title="Китайский">cn</option>
-            </select>
-        </div>
-    </div>
-    <div class="col-md-6">
-        <div class="input-group">
-            <select class="custom-select">
-                <option value="ru" title="Русский">ru</option>
-                <option value="en" title="Английский" selected>en</option>
-                <option value="fr" title="Французский">fr</option>
-                <option value="de" title="Немецкий">de</option>
-                <option value="jp" title="Японский">jp</option>
-                <option value="cn" title="Китайский">cn</option>
-            </select>
-            <input type="text" class="form-control" placeholder="Перевод">
-        </div>
-    </div>
-
-    <div class="col-md-12">
-        <button type="button" class="btn btn-primary">Добавить</button>
-    </div>
-</div>
+<%= render 'words/new_form' %>
 
 <div class="row" id="search_form">
     <div class="col-lg-8 offset-lg-2">
