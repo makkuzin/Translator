@@ -2,4 +2,9 @@ class Word < ApplicationRecord
   validates :title, presence: true, uniqueness: true
 
   belongs_to :language
+  belongs_to :meaning
+
+  def translations
+    meaning.words.where.not(id: id)
+  end
 end

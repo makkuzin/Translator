@@ -40,14 +40,13 @@ RSpec.describe Language, type: :model do
   end
 
   context 'associations' do
-    let!(:language) { Language.create title: 'English', transcription: 'en' }
+    let(:language) { Language.create title: 'English', transcription: 'en' }
 
     it 'has many words' do
-      word1 = Word.create title: 'Title1', language_id: language.id
-      word2 = Word.create title: 'Title2', language_id: language.id
+      language.words.build title: 'Word1'
+      language.words.build title: 'Word2'
 
-      expect(word1).to be_in(language.words)
-      expect(word2).to be_in(language.words)
+      expect(language.words.size).to eq(2)
     end
   end
 end
